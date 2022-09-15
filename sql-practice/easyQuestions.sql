@@ -108,3 +108,17 @@ SELECT * FROM patients
 WHERE patient_id 
 IN (1,45,534,879,1000);
 
+-- Show the total number of admissions
+
+SELECT patient_id, first_name FROM patients
+where LEN(first_name) >= 6
+and first_name like 'S%'
+AND first_name like '%s';
+
+SELECT p.patient_id, p.first_name, p.last_name FROM patients p
+JOIN admissions a
+ON p.patient_id = a.patient_id
+where a.primary_diagnosis = 'Dementia';
+
+SELECT first_name from patients
+order by len(first_name), first_name asc;
