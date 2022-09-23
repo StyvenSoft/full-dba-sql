@@ -31,3 +31,11 @@ SELECT * FROM sakila.language WHERE name <> 'German';
 
 SELECT * FROM sakila.country WHERE country = 'Algeria' AND country_id = 2;
 
+SELECT * FROM sakila.country WHERE language_id = 1 OR name = 'German';
+
+SELECT * FROM sakila..film WHERE NOT name = 'Action';
+
+SELECT DISTINCT(rating) FROM sakila.film WHERE NOT rating = 'PG';
+
+SELECT * FROM sakila.customer WHERE first_name in ('MARY', 'PATRICIA');
+
