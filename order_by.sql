@@ -25,3 +25,9 @@ SELECT DISTINCT amount FROM sakila.payment WHERE amount < 3;
 -- diferente <>
 
 SELECT * FROM sakila.staff WHERE staff_id <> 2
+
+
+SELECT * FROM sakila.language WHERE name <> 'German';
+
+SELECT * FROM sakila.country WHERE country = 'Algeria' AND country_id = 2;
+
